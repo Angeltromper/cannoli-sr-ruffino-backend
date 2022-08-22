@@ -1,5 +1,6 @@
 package nl.angeltr.cannolisrruffino.controllers;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,6 @@ public class AdminController {
 
     @GetMapping(value = "")
     public ResponseEntity<Object> getMessage() {
-        return new ResponseEntity<>("SECURED REST endpoint: /admin",HttpStatus.OK);
+        return new ResponseEntity<>("SECURED REST endpoint: /admin", HttpStatus.OK);
     }
 }

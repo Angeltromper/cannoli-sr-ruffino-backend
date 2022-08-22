@@ -1,4 +1,7 @@
 package nl.angeltr.cannolisrruffino.repositories;
 
-public interface CannoliRepository {
+public interface CannoliRepository extends JpaRepository {
+
+
+
 }

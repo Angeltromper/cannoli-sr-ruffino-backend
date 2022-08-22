@@ -1,9 +1,11 @@
 package nl.angeltr.cannolisrruffino.controllers;
 
+import nl.angeltr.cannolisrruffino.models.Cannoli;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 public class CannoliController {
@@ -26,17 +28,17 @@ public class CannoliController {
         }
 
     @GetMapping("/cannolis")
-    public ResponseEntity<List<CannolisDto>> getAllCannolis(@RequestParam(value = "taste" , required = false) Optional<String> taste) {
+    public ResponseEntity<List<CannoliDto>> getAllCannolis(@RequestParam(value = "brand" , required = false) Optional<String> brand) {
 
-        List<CannolisDto> dtos;
+        List<Cannoli> dtos;
 
-        if (taste.isEmpty()) {
+        if (brand.isEmpty()) {
 
-            dtos = cannoliService.getAllCannolis();
+            dtos = cannoliService.getAllCannoli();
 
         } else {
 
-            dtos = cannoliService.getAllCannolisByTaste(taste.get());
+            dtos = cannoliService.getAllCannolisByTaste(brand.get());
 
         }
 

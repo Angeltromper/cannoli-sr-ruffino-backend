@@ -1,6 +1,4 @@
 package nl.angeltr.cannolisrruffino.models;
 
-public class Cannoli {
-
-
+public enum UserRole {
 }
