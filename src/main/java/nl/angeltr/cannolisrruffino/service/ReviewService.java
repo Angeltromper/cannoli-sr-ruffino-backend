@@ -1,4 +1,4 @@
 package nl.angeltr.cannolisrruffino.service;
 
-public interface ReviewService {
+public class ReviewService {
 }

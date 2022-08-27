@@ -1,4 +1,4 @@
 package nl.angeltr.cannolisrruffino.service;
 
-public interface UserService {
+public class UserService {
 }

@@ -1,7 +1,10 @@
 package nl.angeltr.cannolisrruffino.repositories;
 
-public interface CannoliRepository extends JpaRepository {
+import nl.angeltr.cannolisrruffino.models.Cannoli;
 
+import java.util.List;
 
+public interface CannoliRepository extends JpaRepository<Cannoli, Long> {
 
+    List<Cannoli> findAllCannoliByBrandEqualsIgnoreCase(String brand);
 }

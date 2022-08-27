@@ -1,4 +1,4 @@
 package nl.angeltr.cannolisrruffino.service;
 
-public class CannoliServiceImpl {
+public class SellService {
 }

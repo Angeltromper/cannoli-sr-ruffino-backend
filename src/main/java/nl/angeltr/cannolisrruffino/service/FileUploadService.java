@@ -1,4 +1,4 @@
 package nl.angeltr.cannolisrruffino.service;
 
-public class GlutenFreeCannoliServiceImpl {
+public class FileUploadService {
 }

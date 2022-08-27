@@ -1,6 +1,5 @@
 package nl.angeltr.cannolisrruffino.controllers;
 
-import nl.angeltr.cannolisrruffino.service.GlutenFreeCannoliService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
