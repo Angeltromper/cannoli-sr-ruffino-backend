@@ -1,4 +1,4 @@
 package nl.angeltr.cannolisrruffino.models;
 
-public class Sell {
+public class Status {
 }

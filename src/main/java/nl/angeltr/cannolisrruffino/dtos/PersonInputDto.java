@@ -1,4 +1,4 @@
 package nl.angeltr.cannolisrruffino.dtos;
 
-public class IngredientsDto {
+public class PersonInputDto {
 }
