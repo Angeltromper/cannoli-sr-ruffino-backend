@@ -1,85 +1,93 @@
 package nl.angeltr.cannolisrruffino.dtos;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import nl.angeltr.cannolisrruffino.models.Cannoli;
 import nl.angeltr.cannolisrruffino.models.FileUploadResponse;
 import nl.angeltr.cannolisrruffino.models.GlutenFreeCannoli;
 import nl.angeltr.cannolisrruffino.models.User;
 
+
+@Getter @Setter
 public class CannoliDto {
-    private Long id;
-    private String cannoliName;
-    private String description;
-    private String ingredients;
-    private GlutenFreeCannoli glutenFreeCannoli;
-    private String flavour;
-    private String calories;
-    private Double weight;
-    private Double price;
-    private Boolean availableCannoli;
-    private Integer sold;
-    private String linkToFranchise;
-    private String linkToReview;
-    private FileUploadResponse image;
 
-    private User user;
+    public Long id;
+    public String cannoliName;
+    public String cannoliType;
+    public String description;
+    public String ingredients;
+    public String flavour;
+    public String calories;
+    public double weight;
+    public double price;
+    public boolean gluten;
+    public boolean vegan;
+    public String linkToFranchise;
+    public String linkToReview;
+
+    @JsonSerialize
+    FileUploadResponse image;
+
+    public static CannoliDto fromCannoli(Cannoli cannoli) {
+
+        var dto = new CannoliDto();
+
+        dto.id = cannoli.getId();
+
+        dto.cannoliName = cannoli.getCannoliName();
+
+        dto.cannoliType = cannoli.getCannoliType();
+
+        dto.description = cannoli.getDescription();
+
+        dto.ingredients = cannoli.getIngredients();
+
+        dto.flavour = cannoli.getFlavour();
+
+        dto.weight = cannoli.getWeight();
+
+        dto.price = cannoli.getPrice();
+
+        dto.glutenFree = cannoli.getGlutenFree();
+
+        dto.vegan = cannoli.getVegan();
+
+        dto.linkToFranchise = cannoli.getLinkToFranchise();
+
+        dto.linkToReview = cannoli.getLinkToReview();
+
+        dto.image = cannoli.getImage();
+
+        return dto;
+    }
 
 
-    public Long getId() { return id; }
+//   public Long getId() { return id; }
+//   public String getCannoliName() { return cannoliName; }
+//   public String getCannoliType() { return cannoliType; }
+//   public String getDescription() { return description; }
+//   public String getIngredients() { return ingredients; }
+//   public String getFlavour() { return flavour; }
+//   public String getCalories() { return calories; }
+//   public double getWeight() { return weight; }
+//   public double getPrice() { return price; }
+//   public boolean getGluten() { return gluten; }
+//   public boolean getVegan() { return vegan; }
+//   public String getLinkToFranchise() { return linkToFranchise; }
+//   public String getLinkToReview() { return linkToReview; }
 
-    public void setId(Long id) { this.id = id; }
 
-    public String getCannoliName() { return cannoliName; }
 
-    public void setCannoliName (String cannoliName) { this.cannoliName = cannoliName; }
-
-    public String getDescription() { return description; }
-
-    public void setDescription (String description) { this.description = description; }
-
-    public String getIngredients() { return ingredients; }
-
-    public void setIngredients (String ingredients) { this.ingredients = ingredients; }
-
-    public GlutenFreeCannoli getGlutenFreeCannoli() { return glutenFreeCannoli; }
-
-    public void setGlutenFreeCannoli (GlutenFreeCannoli glutenFreeCannoli) { this.glutenFreeCannoli = glutenFreeCannoli; }
-
-    public String getFlavour() { return flavour; }
-    public void setFlavour (String flavour) { this.flavour = flavour; }
-
-    public String getCalories() { return calories; }
-    public void setCalories (String calories) { this.calories = calories; }
-
-    public Double getWeight() { return weight; }
-
-    public void setWeight( Double weight ) { this.weight = weight; }
-
-    public Double getPrice() { return price; }
-
-    public void setPrice(Double price) { this.price = price; }
-
-    public Boolean getAvailAbleCannoli() { return availableCannoli; }
-
-    public void setAvailAbleCannoli ( Boolean availableCannoli) { this.availableCannoli = availableCannoli; }
-
-    public Integer getSold() { return sold; }
-
-    public void setSold(Integer sold) { this.sold = sold; }
-
-    public String getLinkToFranchise() { return linkToFranchise; }
-
-    public void setLinkToFranchise(String linkToFranchise) { this.linkToFranchise = linkToFranchise; }
-
-    public String getLinkToReview() { return linkToReview; }
-
-    public void setLinkToReview(String linkToReview) { this.linkToReview = linkToReview; }
-
-    public User getUser() { return user; }
-
-    public void setUser (User user) { this.user = user; }
-
-    public FileUploadResponse getImage() { return image; }
-
-    public void setImage (FileUploadResponse image) { this.image = image; }
+//   public void setId(Long id) { this.id = id; }
+//   public void setCannoliName (String cannoliName) { this.cannoliName = cannoliName; }
+//   public void setCannoliType (String cannoliType) { this.cannoliType = cannoliType; }
+//   public void setDescription (String description) { this.description = description; }
+//   public void setIngredients (String ingredients) { this.ingredients = ingredients; }
+//   public void setFlavour (String flavour) { this.flavour = flavour; }
+//   public void setCalories (String calories) { this.calories = calories; }
+//   public void setWeight( Double weight ) { this.weight = weight; }
+//   public void setPrice(Double price) { this.price = price; }
+//   public void setLinkToFranchise(String linkToFranchise) { this.linkToFranchise = linkToFranchise; }
+//   public void setLinkToReview(String linkToReview) { this.linkToReview = linkToReview; }
 }
 

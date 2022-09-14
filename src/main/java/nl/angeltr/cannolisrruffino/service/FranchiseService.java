@@ -1,4 +1,4 @@
 package nl.angeltr.cannolisrruffino.service;
 
-public class FranchiseService {
+public interface FranchiseService {
 }

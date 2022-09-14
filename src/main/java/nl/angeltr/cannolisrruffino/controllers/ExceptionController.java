@@ -1,15 +1,14 @@
 package nl.angeltr.cannolisrruffino.controllers;
 
+import nl.angeltr.cannolisrruffino.exceptions.BadRequestException;
 import nl.angeltr.cannolisrruffino.exceptions.RecordNotFoundException;
 import nl.angeltr.cannolisrruffino.exceptions.UsernameNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
 @ControllerAdvice
 public class ExceptionController {
 
